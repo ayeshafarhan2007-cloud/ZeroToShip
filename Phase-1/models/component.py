@@ -12,3 +12,12 @@ class Component:
             "owner": self.owner,
             "status": self.status
         }
+
+    @classmethod
+    def from_dict(cls, data):
+        return cls(
+            id=data["id"],
+            name=data["name"],
+            owner=data["owner"],
+            status=data["status"]
+        )
